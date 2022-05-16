@@ -1,0 +1,185 @@
+
+.modalMenu{
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px #0000009f;
+    margin:40px;
+    position: absolute;
+    right: 300px;
+    top: 22px;
+    text-transform: capitalize;
+    width:20%;
+    z-index: 1;
+}
+
+.sectionProfile{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    line-height: 14px;
+    padding:0px 0px 20px 0px;
+    text-decoration: none;
+}
+
+.sectionProfile h2{
+    color: #2b2b2be6;
+    cursor: pointer;
+    font-size: 0.960rem;
+}
+
+.sectionProfile P{
+    color: #2b2b2be6;
+    cursor: pointer;
+    font-size: 0.800rem;
+}
+
+.imgUserMenu{
+    bottom: 6px;
+    border-radius: 49.9%;
+    position: relative;
+    right: 30px;
+    height: 60px;
+    width:60px;
+}
+
+.btnShowProfile{
+    background: none;
+    border: 1px solid #0511f7;
+    border-radius: 40px;
+    color: #166af2;
+    cursor: pointer;
+    font-size: 0.860rem;
+    font-weight: bold;
+    margin: 10px;
+    padding: 4px;
+    position: absolute;
+    top:70px;
+    text-transform: capitalize;
+    width:90%;
+}
+
+.btnShowProfile:hover{
+    background: #131ef91a;
+}
+
+.configurations , .btnSignOff {
+    margin:20px;
+    line-height: 10px;
+}
+
+.configurations h3{
+    color: #343131;
+    font-size: 0.960rem;
+}
+
+.configurations p{
+    color: #6c6c6c;
+    font-size: 0.840rem;
+}
+
+.sectionProfile , .configurations {
+    border-bottom: 0.200px solid #eaeaea;
+}
+
+.btnSignOff{
+    color: #6c6c6c;
+    font-size: 0.840rem;
+}
+
+.configurations p:hover , .btnSignOff:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    .modalMenu{
+        right: 200px;
+        top: 32px;
+    }
+    
+    .sectionProfile h2{
+        font-size: 0.700rem;
+    }
+    
+    .sectionProfile P{
+        font-size: 0.600rem;
+    }
+    
+    .imgUserMenu{
+        bottom: 6px;
+        border-radius: 49.9%;
+        position: relative;
+        right: 30px;
+        height: 30px;
+        width:30px;
+    }
+    
+    .configurations , .btnSignOff {
+        margin:10px;
+        line-height: 20px;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 768px) {
+    .modalMenu{
+        right: 200px;
+        top: 32px;
+        width:40%;
+        z-index: 1;
+    }
+    
+    .sectionProfile h2{
+        font-size: 0.700rem;
+    }
+    
+    .sectionProfile P{
+        font-size: 0.600rem;
+    }
+    
+    .imgUserMenu{
+        bottom: 6px;
+        border-radius: 49.9%;
+        position: relative;
+        right: 30px;
+        height: 30px;
+        width:30px;
+    }
+    
+    .configurations , .btnSignOff {
+        margin:10px;
+        line-height: 20px;
+    }
+
+}
+
+@media (min-width: 300px) and (max-width:  549px) {
+
+    .modalMenu{
+        right: 100px;
+        top: 32px;
+    }
+    
+    .sectionProfile h2{
+        font-size: 0.700rem;
+    }
+    
+    .sectionProfile P{
+        font-size: 0.600rem;
+    }
+    
+    .imgUserMenu{
+        bottom: 6px;
+        border-radius: 49.9%;
+        position: relative;
+        right: 30px;
+        height: 30px;
+        width:30px;
+    }
+    
+    .configurations , .btnSignOff {
+        margin:10px;
+        line-height: 20px;
+    }
+
+
+}

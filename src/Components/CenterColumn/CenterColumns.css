@@ -1,0 +1,271 @@
+.containerNews{
+    margin: 6px 50px;
+    width: 90%;
+}
+
+.boxNewPost{
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 0.400px solid #d9d9d9;
+    height: 140px;
+    padding: 0px 20px;
+    width: 90%;
+}
+
+
+
+.imgProfile{
+    border-radius: 49.9%;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    height: 54px;
+    left: 0px;
+    margin-right: 10px;
+    position: relative;
+    top: 20px;
+    width: 54px;
+}
+
+.btnNewPost{
+    border-radius: 40px;
+    border: 1px solid #989898;
+    color: #6c6c6c;
+    cursor: pointer;
+    height: 50px;
+    padding-left: 20px;
+    text-align: left;
+    width: 84%;
+}
+
+.typeOptions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 6px;
+}
+
+.btnTypePost{
+    border: none;
+    background-color: #ffffff;
+    color: #6c6c6c;
+    cursor: pointer;
+    padding: 14px 7px;
+    text-transform: capitalize;
+}
+
+.btnTypePost span{
+    font-size: 1.2rem;
+    padding-right: 14px;
+}
+
+.btnTypePost:hover{
+    background-color: #e4e2e2;
+    border-radius: 4px;
+    padding: 14px 7px;
+}
+
+.icon-picture{
+    color: #05a3b8;
+}
+
+.icon-youtube-play{
+    color: #61a65c;
+}
+
+.icon-calendar{
+    color: #eeb805;
+}
+
+.icon-newspaper{
+    color: #d47389;
+}
+
+.orderPost{
+    display: grid;
+    grid-template-columns: 70% 40%;
+    margin: 0px 0px -20px;
+    text-transform: capitalize;
+}
+
+.line{
+    border-bottom: 1px solid #9d9c9c;
+}
+
+.infoOrder{
+    color: #3c3c3c;
+    font-size: 0.800rem;
+    margin: 4px;
+}
+
+.optionsOrder{
+    background-color: #ffffff;
+    border-radius: 0px 0px 6px 6px;
+    box-shadow: 0px 3px 8px #000000;
+    position: absolute;
+    right: 470px;
+    top: 250px;
+    width: 160px;
+    z-index: 1;
+}
+
+
+.optionsOrder p{
+    color: #242424;
+    font-size: 0.800rem;
+    padding: 4px 10px;
+    text-transform: capitalize;
+}  
+
+.optionsOrder p:hover{
+    background-color: #d4d4d4;
+}   
+
+.alertConfirmDelete{
+    background-color: #ffffff;
+    box-shadow: 0px 0px 8px #2b2b2b;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    left: 420px;
+    position: absolute;
+    padding: 0px 40px;
+    top: 150px;
+    width: 30%;
+    z-index: 1;
+}
+
+.alertConfirmDelete h2 {
+    color: #2f2f2f;
+    font-weight: normal;
+    font-size: 1.6rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.alertConfirmDelete p {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.alertConfirmDelete div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.btnBack,
+.btnDiscard {
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 8px;
+    padding: 10px 16px;
+    text-transform: capitalize;
+}
+
+.btnBack {
+    background-color: transparent;
+    border: 1px solid #2b7df9;
+    color: #2b7df9;
+}
+
+.btnDiscard {
+    background-color: #2b7df9;
+    color: #ffffff;
+}
+
+@media (min-width: 768px) and (max-width: 1180px) {
+
+    .containerNews{
+        margin: 6px -40px;
+        width: 100%;
+    }
+    
+    .boxNewPost{
+        padding: 0px 30px;
+        width: 88%;
+    }
+    
+    .btnNewPost{
+        width: 80%;
+    }
+    
+    .btnTypePost{
+        border: none;
+        background-color: #ffffff;
+        color: #6c6c6c;
+        cursor: pointer;
+        padding: 10px 2px;
+        text-transform: capitalize;
+    }
+
+    .btnTypePost:hover{
+        background-color: #e4e2e2;
+        border-radius: 4px;
+        padding: 2px 2px;
+    }
+
+    .optionsOrder{
+        right: 70px;
+    }
+    
+    .alertConfirmDelete{
+        left: 180px;
+        width: 50%;
+    }
+    
+}
+
+@media (min-width: 550px) and (max-width: 767px) {
+    .containerNews{
+        margin: 6px 60px;
+        width: 200%;
+    }
+
+    .boxNewPost{
+        padding: 0px 0px;
+        width: 100%;
+    }
+    
+    .btnNewPost{
+        width: 60%;
+    }
+
+    .optionsOrder{
+        right: 20px;
+    }
+
+    .alertConfirmDelete{
+        left: 140px;
+        width: 60%;
+    }
+}
+
+@media (min-width: 300px) and (max-width:  549px) {
+
+    .containerNews{
+        margin: 14px 10px;
+        width: 94%;
+    }
+
+    .boxNewPost{
+        padding: 0px 0px;
+        width: 100%;
+    }
+    
+    .btnNewPost{
+        width: 78%;
+    }
+
+    .optionsOrder{
+        right: 20px;
+        top: 166%;
+    }
+
+    .alertConfirmDelete{
+        left: 50px;
+        width: 70%;
+    }
+}

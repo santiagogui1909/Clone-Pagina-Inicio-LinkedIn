@@ -1,0 +1,66 @@
+
+.boxOptionsPost{
+    background: rgb(255, 255, 255);
+    box-shadow: 0 3px 8px rgb(81, 81, 81);
+    border-radius: 6px;
+    font-size: 0.800rem;
+    left: 164px;
+    position: relative;
+    bottom: 50px;
+    width: 98%;
+    height: 74vh;
+    z-index: 1;
+}
+
+.boxOptionsPost ul {
+    padding: 10px 0px;
+}
+
+.boxOptionsPost ul li{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.750rem;
+    list-style: none;
+    overflow: hidden;
+    margin: 4px 0px; 
+    padding: 10px ;
+    width: 94%;
+}
+
+.boxOptionsPost ul li:hover{
+    background-color: #c0c0c0;
+}
+
+.boxOptionsPost ul li p{
+    padding-left: 32px;
+    color:#4d4d4d;
+}
+
+.boxOptionsPost ul li span{
+    color:#545353;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.boxOptionsPost ul li span::first-line{
+    font-size: 0.850rem;
+    font-weight: bold;
+}
+
+@media (min-width: 550px) and (max-width: 767px) {
+    .boxOptionsPost{
+        left: 100px;
+        position: relative;
+        bottom: 50px;
+    }
+}
+
+@media (min-width: 300px) and (max-width:  549px) {
+    .boxOptionsPost{
+        left: 100px;
+        position: relative;
+        bottom: 20px;
+    }
+}

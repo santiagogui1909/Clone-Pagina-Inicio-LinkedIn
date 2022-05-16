@@ -1,0 +1,510 @@
+.cardPost {
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 20px 0px;
+    width: 98%;
+    z-index: -1;
+}
+
+.sectionInfoUser {
+    display: flex;
+    flex-direction: row;
+    line-height: 8px;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+.userImg {
+    padding: 10px;
+    border-radius: 49.9%;
+    width: 48px;
+    height: 45px;
+}
+
+.dataUser h2 {
+    font-size: 0.900rem;
+}
+
+.dataUser p {
+    color: #747474;
+    font-size: 0.700rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 400px;
+    white-space: nowrap;
+}
+
+.icon-globe {
+    font-size: 1rem;
+}
+
+.btnOptionsCard {
+    background-color: transparent;
+    border: none;
+    color: #9a9a9a;
+    cursor: pointer;
+    font-size: 1.4rem;
+    height: 20px;
+    position: relative;
+    right: 20px;
+}
+
+.boxMenuOptions{
+    position:absolute;
+}
+
+
+.sectionPost {
+    padding: 0px 10px;
+}
+
+.sectionPost p {
+    font-size: 0.900rem;
+    padding-left: 12px;
+    word-break: break-all;
+}
+
+.sectionPost img {
+    width: 100%;
+}
+
+.countInteractions {
+    border-bottom: 0.200px solid #e0dede;
+    color: #747474;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.750rem;
+    justify-content: space-between;
+    padding: 0px 30px;
+    text-transform: capitalize;
+}
+
+.interaction {
+    color: #747474;
+    display: flex;
+    font-size: 0.900rem;
+    flex-direction: row;
+    justify-content: space-around;
+    text-transform: capitalize;
+}
+
+.interaction p {
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.interaction span {
+    font-size: 1.2rem;
+}
+
+.interaction p:hover {
+    background-color: #e1dede;
+}
+
+/* form new post */
+
+.spiner {
+    border: 4px solid rgba(0, 0, 0, .1);
+    border-left-color: #2b7df9;
+    border-radius: 100%;
+    position: relative;
+    height: 36px;
+    left: 250px;
+    top: 100px;
+    width: 36px;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Background modal*/
+.modal{
+    text-decoration: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    -webkit-transition: all .7s;
+    transition: all .7s;
+    cursor: default;
+    z-index: 1;
+}
+
+.formPost {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #060606;
+    height: 330px;
+    padding: 10px;
+    position: absolute;
+    right: 400px;
+    top: 40px;
+    width: 40%;
+    z-index: 1;
+}
+
+.formPost header {
+    border-bottom: 0.200px solid #eaeaea;
+    color: #747474;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: -20px 20px;
+}
+
+.formPost header h3 {
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+.formPost header span {
+    cursor: pointer;
+    font-size: 1.4rem;
+    position: relative;
+    top: 24px;
+}
+
+.boxUser {
+    display: flex;
+    flex-direction: row;
+    line-height: 8px;
+    margin: 20px 10px;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+.boxUser img {
+    padding: 10px;
+    border-radius: 49.9%;
+    width: 48px;
+    height: 45px;
+}
+
+.boxUser div {
+    line-height: 2px;
+    padding-left: 6px;
+}
+
+.boxUser div p {
+    color: #454444;
+    font-weight: bold;
+    font-size: 0.900rem;
+}
+
+.boxUser div button {
+    background-color: transparent;
+    border: 2px solid #a7a6a6;
+    border-radius: 30px;
+    color: #6c6a6a;
+    cursor: pointer;
+    padding: 6px 16px;
+    text-transform: capitalize;
+}
+
+.boxUser div button:hover {
+    background-color: #dedddd;
+    border: 2px solid #3a3a3a;
+    color: #6c6a6a;
+}
+
+.inputText {
+    border: none;
+    font-size: 1.2rem;
+    padding-left: 20px;
+    resize: none;
+    text-align: left;
+    width: 90%;
+}
+
+.inputText:focus {
+    outline: none;
+}
+
+.inputText::placeholder {
+    font-size: 1.2rem;
+}
+
+.btnAddHashtag {
+    background-color: transparent;
+    border: none;
+    color: #2b7df9;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.900rem;
+    margin: 30px 14px;
+}
+
+.formOtherOptions {
+    display: grid;
+    grid-template-columns: 54% 20% 20%;
+    grid-gap: 10px;
+}
+
+
+.sectionOptions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-right: 1px solid #dedcdc;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.sectionOptions li {
+    width: 40px;
+    height: 30px;
+    overflow: hidden;
+    margin: 4px;
+}
+
+.sectionOptions span {
+    background-color: transparent;
+    border-radius: 100%;
+    color: #4f4f4f;
+    cursor: pointer;
+    font-size: 1.3rem;
+    padding: 1px;
+}
+
+.sectionOptions span:hover {
+    background-color: #c3c3c3;
+    color: #4f4f4f;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.hoverInformation {
+    bottom: 40px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 3px 8px rgb(81, 81, 81);
+    border-radius: 12px;
+    color: rgb(0, 0, 0);
+    display: none;
+    font-size: 0.800rem;
+    position: absolute;
+    padding: 10px;
+    text-transform: capitalize;
+    width: auto;
+    z-index: 1;
+    animation: infoOptions 0.5s linear;
+}
+
+.sectionOptions li:hover .hoverInformation {
+    display: block;
+}
+
+@keyframes infoOptions {
+    0% {
+        transform: translateY(-4px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.btnComents {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    color: #4f4f4f;
+    cursor: pointer;
+    font-size: 0.950rem;
+    text-transform: capitalize;
+}
+
+.btnComents:hover {
+    background-color: #e9e4e4ab;
+}
+
+.btnPublish {
+    background-color: #e9e4e4ab;
+    border: none;
+    border-radius: 20px;
+    color: #928f8f;
+    font-size: 0.950rem;
+    text-transform: capitalize;
+    cursor: not-allowed;
+}
+
+/* alert for confirm finish process post */
+
+.AlertConf {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #060606;
+    height: 206px;
+    padding: 10px;
+    position: absolute;
+    left: 520px;
+    top: 150px;
+    width: 22%;
+    z-index: 1;
+}
+
+.AlertConf header {
+    border-bottom: 0.200px solid #eaeaea;
+    color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: -10px 20px;
+}
+
+.AlertConf header h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.AlertConf header span {
+    cursor: pointer;
+    font-size: 1.2rem;
+    position: relative;
+    top: 20px;
+}
+
+.questionAlert {
+    border-bottom: 0.200px solid #eaeaea;
+    font-size: 0.960rem;
+    padding: 10px;
+}
+
+.sectionBtnAlert {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.btnBack,
+.btnDiscard {
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 8px;
+    padding: 10px 16px;
+    text-transform: capitalize;
+}
+
+.btnBack {
+    background-color: transparent;
+    border: 1px solid #2b7df9;
+    color: #2b7df9;
+}
+
+.btnDiscard {
+    background-color: #2b7df9;
+    color: #ffffff;
+}
+
+@media (min-width: 1001px) and  (max-width: 1180px) {
+    .cardPost {
+        width: 100%;
+    }
+
+    .sectionInfoUser {
+        width: 80px;
+    }
+
+    .dataUser p {
+        width: 300px;
+    }
+
+    .formPost { 
+        right: 200px;
+        top: 40px;
+        width: 50%;
+    }
+
+    .AlertConf {
+        left: 340px;
+        top: 150px;
+        width: 40%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+    .cardPost {
+        width: 100%;
+    }
+
+    .dataUser p {
+        width: 100px;
+    }
+
+    .formPost { 
+        right: 160px;
+        top: 80px;
+        width: 50%;
+    }
+
+    .AlertConf {
+        left: 240px;
+        top: 250px;
+        width: 40%;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 767px) {
+
+    .cardPost {
+        width: 120%;
+    }
+
+    .btnOptionsCard {
+        right: 120px;
+    }
+
+    .formPost { 
+        right: 60px;
+        top: 80px;
+        width: 70%;
+    }
+
+    .AlertConf {
+        left: 240px;
+        top: 150px;
+        width: 40%;
+    }
+}
+
+@media (min-width: 300px) and (max-width:  549px) {
+
+    .btnOptionsCard {
+        left: 100px;
+    }
+
+    .dataUser p {
+        color: #747474;
+        font-size: 0.700rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 200px;
+        white-space: nowrap;
+    }
+
+    .formPost { 
+        right: 40px;
+        top: 1100px;
+        width: 70%;
+    }
+
+    .AlertConf {
+        left: 90px;
+        top: 150px;
+        width: 70%;
+    }
+}

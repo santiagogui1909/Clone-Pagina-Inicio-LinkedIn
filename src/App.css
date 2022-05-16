@@ -1,0 +1,257 @@
+#containerMenu {
+    background-color: #fff;
+    border-bottom: 0.400px solid #d9d9d9;
+    display: grid;
+    grid-template-columns: 41% 44%;
+    height: 8vh;
+}
+
+.searcher {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 50px;
+}
+
+.logoLinkedin img {
+    bottom: 14px;
+    cursor: pointer;
+    left: 30px;
+    height: 35px;
+    position: relative;
+    width: 35px;
+}
+
+.searcher span,
+.searcher input {
+    background-color: #EEF3F8;
+    border: none;
+    border-radius: 4px;
+    height: 30px;
+}
+
+.searcher span {
+    padding: 4px;
+    color: #6c6c6c;
+    margin-right: 8px;
+}
+
+.searcher input {
+    width: 240px;
+    outline: none;
+    border: 0;
+}
+
+nav {
+    margin: -12px;
+}
+
+nav ul {
+    color: #6c6c6c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+nav ul li span {
+    font-size: 1.3rem;
+}
+
+nav ul li {
+    cursor: pointer;
+    font-size: 0.700rem;
+    list-style: none;
+    text-align: center;
+    text-transform: capitalize;
+    width: 90px;
+}
+
+nav ul li:hover {
+    color: #000000;
+}
+
+.userProfile {
+    position: relative;
+    bottom: 6px;
+    right: 4px;
+    border-right: 1px solid #c7c7c7;
+    height: 56px;
+}
+
+.userProfile:active {
+    bottom: 5px;
+    height: 52px;
+}
+
+.userImgOp {
+    position: relative;
+    top: 4px;
+    right: 4px;
+    width: 35%;
+    height: 46%;
+    border-radius: 100%;
+}
+
+.icon-down-dir {
+    font-size: 0.800rem;
+}
+
+/* style for the structure where stay diferents columns the page home */
+
+#containerHome {
+    display: grid;
+    grid-template-columns: 18% 52% 29%;
+    margin: 15px 110px;
+}
+
+@media (min-width: 768px) and (max-width: 1160px) {
+
+    #containerMenu {
+        background-color: #fff;
+        border-bottom: 0.400px solid #d9d9d9;
+        display: grid;
+        grid-template-columns: 10% 80%;
+        height: 8vh;
+    }
+
+    .searcher {
+        display: flex;
+        justify-content: flex-start;
+        margin: 10px -30px;
+    }
+
+    .searcher span,
+    .searcher input {
+        background-color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        height: 20px;
+    }
+
+    .searcher span {
+        margin-right: 2px;
+    }
+
+    .searcher input {
+        width: 0px;
+    }
+
+    nav {
+        margin: -16px;
+    }
+    
+    #containerHome {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        margin: 15px 20px;
+    }
+
+}
+
+@media (min-width: 550px) and (max-width: 767px) {
+
+    #containerMenu {
+        grid-template-columns: 14% 70%;
+        height: 8vh;
+        width: 100%;
+    }
+
+    .logoLinkedin img {
+        bottom: 14px;
+        cursor: pointer;
+        left: -20px;
+        height: 35px;
+        position: relative;
+        width: 35px;
+    }
+
+    .searcher {
+        display: flex;
+        justify-content: flex-start;
+        margin: 10px 0px;
+    }
+
+    .searcher span,
+    .searcher input {
+        background-color: transparent;
+        position: relative;
+        right: 40px;
+    }
+
+    .searcher span {
+        margin-right: 2px;
+    }
+
+    .searcher input {
+        width: 0px;
+    }
+
+    nav ul li {
+        cursor: pointer;
+        font-size: 0.500rem;
+        list-style: none;
+        text-align: center;
+        text-transform: capitalize;
+        width: 100px;
+    }
+
+    #containerHome {
+        display: grid;
+        grid-template-columns: 30% 26%;
+        margin: 15px 0px;
+    }
+}
+
+@media (min-width: 300px) and (max-width:  549px) {
+    #containerMenu {
+        grid-template-columns: 4% 80%;
+        height: 6vh;
+        width: 100%;
+    }
+
+    .logoLinkedin img {
+        bottom: 14px;
+        cursor: pointer;
+        left: -30px;
+        height: 20px;
+        position: relative;
+        width: 20px;
+    }
+
+    .searcher {
+        display: flex;
+        justify-content: flex-start;
+        margin: 10px 0px;
+    }
+
+    .searcher span,
+    .searcher input {
+        background-color: transparent;
+        position: relative;
+        right: 70px;
+    }
+
+    .searcher span {
+        margin-right: 2px;
+        font-size: 0.600rem;
+    }
+
+    .searcher input {
+        width: 0px;
+    }
+
+    nav ul li {
+        font-size: 0rem;
+        width: 40px;
+    }
+
+    nav ul li span {
+        font-size: 0.800rem;
+    }    
+
+    #containerHome {
+        display: grid;
+        grid-template-columns: 100%;
+        margin: 15px 0px;
+    }
+}
