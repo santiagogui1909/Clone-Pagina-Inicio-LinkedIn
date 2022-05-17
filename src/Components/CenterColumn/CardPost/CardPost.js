@@ -29,6 +29,7 @@ const CardPost = () => {
         dispatch(activeDelete(false));
     }
 
+    // this map every object that arrive of state global post
     return (
         <>
             {
@@ -41,12 +42,13 @@ const CardPost = () => {
                                 <p>{post.cargo}</p>
                                 <p>{post.fecha}<span className="icon-globe"></span></p>
                             </section>
-                            <button className="btnOptionsCard" 
-                                onClick={()=>openOptions(post.id , post.correo)}>
+                            <button className="btnOptionsCard" onClick={()=>openOptions(post.id , post.correo)}>
                                 <span className="icon-dot-3"></span>
                             </button>
                         </section>
 
+                        {/* this is a condicional for el managment of menu for every post, because every 
+                        menu is deferent depend of if post is the user principal or the other user */}
                         <div className="boxMenuOptions">
                             { activeOptions && idUser === post.id ? 
                                 post.correo === "devsantiago@gmail.com" ? <ModalOptionsUser /> : <ModalOptionsPost /> 
@@ -74,7 +76,7 @@ const CardPost = () => {
                             <p><span className="icon-paper-plane"></span>enviar</p>
                         </section>
                     </div>
-                }).reverse()
+                })
             }
         </>
     );

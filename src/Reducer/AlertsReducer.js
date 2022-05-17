@@ -16,7 +16,7 @@ export const alertsReducer = (state = initialState, action) => {
             scroll: action.payload
         }
 
-        case '@user/message':
+        case '@user/message':  //change state depend the event active
         return state, {
             ...state,
             message: action.payload.message,
@@ -46,7 +46,7 @@ export const alertsReducer = (state = initialState, action) => {
         }
     }
 
-// funtions
+// funtions active the process according to case
 
 export const scrollActive = (scrollval) => {
     return {

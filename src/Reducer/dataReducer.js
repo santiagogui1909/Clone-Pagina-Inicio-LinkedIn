@@ -1,3 +1,5 @@
+// this object array for management the all states of app
+
 const initialState = {
     dataUsers:[{
         id: 1,
@@ -54,7 +56,7 @@ const initialState = {
         imgPerfil: 'https://cdn.pixabay.com/photo/2017/02/06/10/54/sad-2042536__340.jpg',
         descripcion: 'Startups are like rockets: if everything was not on fire it would not be flying.',
         post: undefined,
-        fecha: '2022-02-9',
+        fecha: '2022-02-09',
         like: false,
         countLike: Math.round(Math.random() * 1000),
         comentarios: Math.round(Math.random() * 300),
@@ -102,7 +104,7 @@ const initialState = {
         imgPerfil: 'https://cdn.pixabay.com/photo/2019/02/19/08/43/milky-way-4006343__340.jpg',
         descripcion: 'Universidad Pontificia Bolivariana voy a poner él nombre de la U bien alto, hasta México hemos llegado y voy con toda ❤️🖤',
         post: undefined,
-        fecha: '2022-04-3',
+        fecha: '2022-04-03',
         like: false,
         countLike: Math.round(Math.random() * 1000),
         comentarios: Math.round(Math.random() * 300),
@@ -120,10 +122,10 @@ const initialState = {
         comentarios: Math.round(Math.random() * 300),
     }], 
     userSuggestion: [],
-    activeLike: false,
     valueOne : 0,
     valueTwo : 3,
     idSelected: '',
+    activeLike: false,
     activeOptions: false,
     confirmDelete: false,
 }
@@ -132,19 +134,14 @@ export const dataReducer = (state = initialState, action) => {
 
     switch(action.type) {
 
-        case '@user/orderDate':
-    
-        return state, {
-            ...state,
-            dataUsers: action.payload
-        }
-
+        // get all data of user with post and select a range y show in a componet
         case '@user/getUsers':
         return state, {
             ...state,
             userSuggestion: state.dataUsers.slice(state.valueOne,state.valueTwo)
         }
         
+        // this function update the values and change value for defect of slice in the function getUsers
         case '@user/updateUsers':
             let newValueOne = state.valueOne + 1;
             let newValueTwo = state.valueTwo + 1;
@@ -155,6 +152,7 @@ export const dataReducer = (state = initialState, action) => {
             valueTwo: newValueTwo
         }
 
+        // detect if the post select has a like for the user local or no, with condition verify this and set posibility of change state
         case '@users/like':
             let id = action.payload.id;
             let resultUser = state.dataUsers.filter(user => user.id === id);
@@ -174,6 +172,8 @@ export const dataReducer = (state = initialState, action) => {
             activeLike: !state.activeLike,
         }
 
+        // update the statet dataUsers, use the spring operator for create
+        //  a new array add the new object and after update the  origin state
         case '@users/addPost':
         return state, {
             ...state,
@@ -194,6 +194,8 @@ export const dataReducer = (state = initialState, action) => {
             activeOptions: action.payload 
         }
         
+        // this function detect what is the post select for delete and verufy
+        // in the array, later delete this update the array
         case '@users/delete':
             let idPostDelete = action.payload;
 
@@ -209,19 +211,51 @@ export const dataReducer = (state = initialState, action) => {
             activeOptions: false
         }
 
+        //functions for order the post depend of date or amount likes 
+        case "@users/orderDates":
+        let dates = action.payload;
+
+        state.dataUsers.sort((a , b) => {
+
+            if (a.fecha.replaceAll("-","") > b.fecha.replaceAll("-","") || dates === "antiguos") {
+                return -1;
+            } else if (a.fecha.replaceAll("-","") < b.fecha || dates === "resientes") {
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+
+        return state, {
+            ...state,
+            dataUsers: state.dataUsers
+        }
+
+        case "@users/orderLike":
+        
+        let option = action.payload;
+
+        state.dataUsers.sort((a , b) => {
+            if (a.countLike < b.countLike || option === "menor cantidad likes") {
+                return -1;
+            } else if (a.countLike > b.countLike || option === "mayor cantidad likes") {
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+
+        return state, {
+            ...state,
+            dataUsers: state.dataUsers
+        }
+
         default:
             return state
         }
     }
 
-// funtions
-
-export const orderArray = (order) => {
-    return {
-        type: '@user/orderDate',
-        payload: order
-    }
-}
+// funtions for all topic of create new post , delete and order render
 
 export const showUsers = () => {
     return {
@@ -247,8 +281,9 @@ export const setLikePost = (id , like) => {
     }
 }
 
-export const addPost = (descripcion) => {
+export const addPost = (descripcion , datePost) => {
 
+    // this object has for defect a values (name, email, position, etc)
     return {
         type :'@users/addPost',
         payload: {
@@ -259,7 +294,7 @@ export const addPost = (descripcion) => {
             imgPerfil: 'https://i.ibb.co/8bkstrq/profile-Img.jpg',
             descripcion: descripcion,
             post: undefined,
-            fecha: "ahora",
+            fecha: datePost,
             like: false,
             countLike: 0,
             comentarios: 0
@@ -288,5 +323,19 @@ export const deletePost = (id) => {
     return {
         type :'@users/delete',
         payload: id
+    }
+}
+
+export const orderDate = (optionOrder) => {
+    return{
+        type: '@users/orderDates',
+        payload: optionOrder
+    }
+}
+
+export const orderLikes = (optionOrder) => {
+    return{
+        type: '@users/orderLike',
+        payload: optionOrder
     }
 }

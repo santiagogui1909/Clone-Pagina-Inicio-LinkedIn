@@ -14,10 +14,16 @@ import './App.css';
 
 function App() {
 
+  //manage the state, here stay present the methods
+  // state for the modal window of menu profe 
+
   let dispatch = useDispatch();
   const [menuProfile, setMenuProfile] = useState(false);
   const showMenuProfile = () => setMenuProfile(!menuProfile);
   const scrollValue = useSelector(state => state.alertsReducer.scroll);
+
+  // funtion for the detection of the scroll, this active when
+  // the value is equal a number specific, this add a new class the elements
 
   const scrollNav = () => {
     const posicion = window.pageYOffset;

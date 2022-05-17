@@ -8,21 +8,34 @@ import './CardPost.css';
 
 const FormPost = () => {
 
+    // use the useState for control states specific the form (spinner, alerts, getData for post, etc) 
     const dispatch = useDispatch();
     const [spiner, setSpiner] = useState(true);
     const [alertConfirm, setAlertConfirm] = useState(false);
     const [hashtag, setHashtag] = useState("");
     const [disable, setDisable] = useState(false);
     const [comments, setComent] = useState({
-        comment: ''
+        comment: '',
+        date: 0,
     });
-    let { comment } = comments;
+    let { comment , date } = comments; // destructuring the object comments
 
     const style = {
         background: '#2b7df9',
         color: '#ffffff',
         cursor: 'pointer'
     };
+
+    // get date every page load
+    useEffect(() => {
+        const today = new Date();
+        let year = today.getFullYear();
+        let month = today.getMonth();
+        let day = today.getDay();
+
+        setComent({date: `${year}-${month}-${day}`});
+    },[])
+
 
     // funtion for the spiner
     useEffect(() => {
@@ -32,26 +45,28 @@ const FormPost = () => {
         return () => clearTimeout(timer);
     }, []);
 
-    const closeFormPost = () => {
-        (comment !== "") ? setAlertConfirm(true) : dispatch(activeFormPost());
-    }
+
+    // functions for close, desative o finish a process
+    const closeFormPost = () => (comment !== "") ? setAlertConfirm(true) : dispatch(activeFormPost());
 
     const closeAlertConfirm = () => setAlertConfirm(false);
     
     const discardPost = () => dispatch(activeFormPost());
 
+    // get a data for send a the state global y this update
     const getDataPost = (e) => {
         setHashtag("");
         setComent({ ...comments, comment: e.target.value })
     }
-
+    
     const addHashtag = () => setHashtag("#");
-
+    
+    // function that publish a new state depend the condition 
     const publish = () => {
-
+        
         if (comment !== "") {
             setDisable(true);
-            dispatch(addPost(comment));
+            dispatch(addPost(comment , date));
             dispatch(activeFormPost());
         }
     }
@@ -79,8 +94,7 @@ const FormPost = () => {
                             </div>
                         </section>
 
-                        <textarea className="inputText" placeholder="De qué quieres hablar?"
-                            onChange={(e) => getDataPost(e)}
+                        <textarea className="inputText" placeholder="De qué quieres hablar?" onChange={(e) => getDataPost(e)}
                             value={hashtag !== "" ? hashtag : comment}>
                         </textarea>
 

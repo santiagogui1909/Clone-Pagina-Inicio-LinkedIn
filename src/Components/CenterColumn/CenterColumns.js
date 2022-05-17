@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { activeFormPost, activeDelete } from '../../Reducer/AlertsReducer';
-import { deletePost, activeOptionsPost, orderArray } from '../../Reducer/dataReducer';
+import { deletePost, activeOptionsPost, orderDate , orderLikes} from '../../Reducer/dataReducer';
 import CardPost from './CardPost/CardPost';
 import FormPost from './CardPost/FormPost';
 import profileImage from '../../Images/profileImg.jpg';
@@ -11,10 +11,11 @@ import './CenterColumns.css';
 const News = () => {
 
     const dispatch = useDispatch();
+
+    // get the diferents state with useSelector
     const formModal = useSelector(state => state.alertsReducer.formPost);
     const resDelete = useSelector(state => state.alertsReducer.delete);
     const idUser = useSelector(state => state.dataReducer.idSelected);
-    const posts = useSelector(state => state.dataReducer.dataUsers);
     const [showOrder, setShowOrder] = useState(false);
     const [optionOrder, setOptionOrder] = useState("resientes");
 
@@ -23,8 +24,10 @@ const News = () => {
         dispatch(activeOptionsPost(false));
     }
 
-    const deletePostt = (value) => {
+    // This funtion select the id post selected and send for
+    // parameter a the function deletePost for delete this element in the estate global
 
+    const deletePostt = (value) => {
         if (value === true) {
             dispatch(deletePost(idUser));
             dispatch(activeDelete(false));
@@ -33,22 +36,22 @@ const News = () => {
         }
     }
 
+    // Here management the funtions for select the order type for show the post (date, count likes)
+
     const selectOrder = () => {
         setShowOrder(!showOrder);
     }
 
-    // useEffect((optionOrder) => {
-    //     if (optionOrder === "resientes") {
-    //         dispatch(orderArray(posts.reverse()))
-    //     } else if (optionOrder === "antiguos"){
-    //         dispatch(orderArray(posts))
-    //     }
-    // },[optionOrder])
-
-    const order = (valSelect) => {
+    const orderForDate = (valSelect) => {
         setOptionOrder(valSelect.target.textContent);
         setShowOrder(false);
-        posts.reverse();
+        dispatch(orderDate(optionOrder));
+    }
+
+    const orderForLike = (valSelect) => {
+        setOptionOrder(valSelect.target.textContent);
+        setShowOrder(false);
+        dispatch(orderLikes(optionOrder));
     }
 
     return (
@@ -64,6 +67,8 @@ const News = () => {
                 </section>
             </article>
 
+            {/* windows modal */}
+
             {formModal && <FormPost />}
 
             <article className="orderPost">
@@ -72,9 +77,12 @@ const News = () => {
 
                 {showOrder ?
                     <section className='optionsOrder'>
-                        <p onClick={(e) => order(e)}>resientes</p>
-                        <p onClick={(e) => order(e)}>antiguos</p>
+                        <p onClick={(e) => orderForDate(e)}>resientes</p>
+                        <p onClick={(e) => orderForDate(e)}>antiguos</p>
+                        <p onClick={(e) => orderForLike(e)}>mayor cantidad likes</p>
+                        <p onClick={(e) => orderForLike(e)}>menor cantidad likes</p>
                     </section>
+
                     : null
                 }
             </article>
