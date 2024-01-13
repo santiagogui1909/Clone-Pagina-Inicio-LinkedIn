@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Clone-Pagina-Inicio-LinkedIn/build/static/css/main.3527083a.css",
+    "main.js": "/Clone-Pagina-Inicio-LinkedIn/build/static/js/main.938a7955.js",
+    "static/media/profileImg.jpg": "/Clone-Pagina-Inicio-LinkedIn/build/static/media/profileImg.10f187af48a394e03290.jpg",
+    "static/media/background.png": "/Clone-Pagina-Inicio-LinkedIn/build/static/media/background.396da05f171059639a94.png",
+    "static/media/ad-linkedin.png": "/Clone-Pagina-Inicio-LinkedIn/build/static/media/ad-linkedin.23ced30dc909c08b9d78.png",
+    "static/media/fontello.svg?70725833": "/Clone-Pagina-Inicio-LinkedIn/build/static/media/fontello.d8a85efd49fb1b0eacb2.svg",
+    "static/media/fontello.eot?70725833": "/Clone-Pagina-Inicio-LinkedIn/build/static/media/fontello.e3b901ec17f086c1ce9f.eot",
+    "static/media/fontello.ttf?70725833": "/Clone-Pagina-Inicio-LinkedIn/build/static/media/fontello.571e6f5c5b4349b3f16d.ttf",
+    "static/media/fontello.woff?70725833": "/Clone-Pagina-Inicio-LinkedIn/build/static/media/fontello.729f4059772805104d6b.woff",
+    "static/media/fontello.woff2?70725833": "/Clone-Pagina-Inicio-LinkedIn/build/static/media/fontello.5315dc88c2707ad0f984.woff2",
+    "index.html": "/Clone-Pagina-Inicio-LinkedIn/build/index.html",
+    "main.3527083a.css.map": "/Clone-Pagina-Inicio-LinkedIn/build/static/css/main.3527083a.css.map",
+    "main.938a7955.js.map": "/Clone-Pagina-Inicio-LinkedIn/build/static/js/main.938a7955.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3527083a.css",
+    "static/js/main.938a7955.js"
+  ]
+}
